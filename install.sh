@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 stepCount=1
 
 printf "Starting installation of Java Pi\n"
