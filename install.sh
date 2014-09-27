@@ -1,23 +1,26 @@
 #!/bin/sh
+stepCount=1
 
-echo 'Starting installation of Java Pi'
-echo '================================='
-echo ''
+printf "Starting installation of Java Pi"
+printf "=================================\n"
 
-echo 'Step 1: Updating Raspberry Pi Packages'
+printf "Step $stepCount: Updating Raspberry Pi Packages"
 sudo apt-get update
 sudo apt-get upgrade
-echo ''
+printf "Done\n"
+stepCount++
 
-echo 'Step 2: Install Java Packages'
+printf "Step $stepCount: Install Java Packages"
 sudo apt-get install libtomcat7-java tomcat7-common tomcat7 tomcat7-docs tomcat7-admin tomcat7-examples mysql-server mysql-client libhibernate3-java libguava-java groovy maven ant git vim chromium-browser
-echo ''
-
-echo 'Step 3: Cleaning Up'
-sudo apt-get clean
-echo 'Done'
-
-echo 'Step 4: Java Info'
 sudo update-alternatives --config java
+printf "Done\n"
+stepCount++
+
+printf "Step $stepCount: Cleaning Up"
+sudo apt-get clean
+printf "Done\n"
+stepCount++
+
+printf "Step $stepCount: Java Info"
 java -version
 which java
