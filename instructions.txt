@@ -1,0 +1,22 @@
+enabled SSH
+boot into console
+set correct timezone
+expand filesystem
+set hostname
+decrease amount of memory for the GPU to 16M
+
+sudo nano /etc/tomcat7/tomcat-users.xml
+add <user username="system" password="raspberry" roles="manager-gui"/>
+
+sudo nano ~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt
+export CATALINA_HOME=/etc/tomcat7/
+. ~/.bashrc
+
+sudo nano /etc/default/tomcat7
+
+sudo service tomcat7 restart
+mysql -u root -p
+sudo raspi-config
+
+adjust JVM memory configuration in catalina.sh: JAVA_OPTS=-Xmx256M
