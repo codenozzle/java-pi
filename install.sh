@@ -1,3 +1,6 @@
+#!/bin/sh
+
+echo 'Starting installation of Java Pi'
 sudo apt-get update
 sudo apt-get upgrade
 
