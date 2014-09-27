@@ -11,9 +11,9 @@ printf "Done\n\n"
 stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Setting Tomcat Java Home\n"
-printf "===============================================\n"
-sudo echo "export JAVA_HOME=/usr/lib/jvm/default-java" >> ~/.bashrc
-sudo echo "export CATALINA_HOME=/etc/tomcat7" >> ~/.bashrc
+printf "===============================================\n" 
+sudo echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> ~/.bashrc
+sudo echo 'export CATALINA_HOME=/etc/tomcat7' >> ~/.bashrc
 . ~/.bashrc
 printf "Done\n\n"
 stepCount=$((stepCount+1))
