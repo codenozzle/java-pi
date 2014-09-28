@@ -22,6 +22,6 @@ printf "Step $stepCount: Setting Tomcat Default Manager GUI User\n"
 printf "===============================================\n"
 oldXml='<tomcat-users>.*</tomcat-users>'
 newXml='<tomcat-users><user username="system" password="raspberry" roles="manager-gui"/></tomcat-users>'
-sudo sed 's!'$oldXml'!'$newXml'!g' /etc/tomcat7/tomcat-users.xml
+sudo sed 's:'$oldXml':'$newXml':' /etc/tomcat7/tomcat-users.xml
 printf "Done\n\n"
 stepCount=$((stepCount+1))
