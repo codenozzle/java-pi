@@ -10,7 +10,7 @@ sudo sed -i 's!#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk!JAVA_HOME=/usr/lib/jvm/defa
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
-printf "Step $stepCount: Setting Tomcat Java Home\n"
+printf "Step $stepCount: Setting Java Bash Variables\n"
 printf "===============================================\n" 
 sudo echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> ~/.bashrc
 sudo echo 'export CATALINA_HOME=/etc/tomcat7' >> ~/.bashrc
@@ -19,7 +19,7 @@ printf "Done\n\n"
 stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Setting Tomcat Default Manager GUI User\n"
-printf "===============================================\n" 
-sudo sed 's#\(<tomcat-users>\)*\(</Amount>\)#\1'<user username="system" password="raspberry" roles="manager-gui"/>'\2#g' /etc/tomcat7/tomcat-users.xml
+printf "===============================================\n"
+sudo sed 's#\(<tomcat-users>\)*\(</tomcat-users>\)#\1'<user username="system" password="raspberry" roles="manager-gui"/>'\2#g' /etc/tomcat7/tomcat-users.xml
 printf "Done\n\n"
 stepCount=$((stepCount+1))
