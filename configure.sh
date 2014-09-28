@@ -20,7 +20,7 @@ stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Setting Tomcat Default Manager GUI User\n"
 printf "===============================================\n"
-bacon='<user username="system" password="raspberry" roles="manager-gui"/>'
-sudo sed 's#<tomcat-users>\([^<][^<]*\)</tomcat-users>#<tomcat-users>'$bacon'</tomcat-users>#' /etc/tomcat7/tomcat-users.xml
+newUser='<user username="system" password="raspberry" roles="manager-gui"/>'
+sudo sed 's#<tomcat-users>.*#<tomcat-users>'$bacon'</name>#' /etc/tomcat7/tomcat-users.xml
 printf "Done\n\n"
 stepCount=$((stepCount+1))
