@@ -23,6 +23,7 @@ printf "===============================================\n"
 oldXml="<tomcat-users>.*</tomcat-users>"
 newXml="<tomcat-users><user username=\"system\" password=\"raspberry\" roles=\"manager-gui\"/></tomcat-users>"
 #sudo sed -i "s|\(<tomcat-users>\)[^<>]*\(</tomcat-users>\)|\1${newXml}\2|" /etc/tomcat7/tomcat-users.xml
-sudo sed -i 's#<tomcat-users>\(*\)</tomcat-users>#<tomcat-users>SOMETHING</tomcat-users>#' /etc/tomcat7/tomcat-users.xml
+sudo sed -i 's!(<tomcat-users>\)[^<>]*\(</tomcat-users>\)!<tomcat-users>SOMETHING</tomcat-users>!' /etc/tomcat7/tomcat-users.xml
+#sudo sed -i '/hibernate.connection.password/ s/\(\).*\(\)/\1NewPassword\2/' confluence.cfg.xml
 printf "Done\n\n"
 stepCount=$((stepCount+1))
