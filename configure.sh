@@ -18,10 +18,12 @@ sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
-printf "Step $stepCount: Setting Tomcat Default Manager GUI User\n"
+printf "Step $stepCount: Setting Tomcat Users\n"
 printf "===============================================\n"
-newUser="<user username=\"system\" password=\"raspberry\" roles=\"manager-gui\"/>\n"
-sudo sed -i "s|\(</tomcat-users>\)|${newUser}\1|g" /etc/tomcat7/tomcat-users.xml
+newManagerGuiUser="<user username=\"pi\" password=\"raspberry\" roles=\"manager-gui\"/>\n"
+sudo sed -i "s|\(</tomcat-users>\)|${newManagerGuiUser}\1|g" /etc/tomcat7/tomcat-users.xml
+newAdminGuiUser="<user username=\"pi\" password=\"raspberry\" roles=\"admin-gui\"/>\n"
+sudo sed -i "s|\(</tomcat-users>\)|${newAdminGuiUser}\1|g" /etc/tomcat7/tomcat-users.xml
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
