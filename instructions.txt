@@ -7,8 +7,7 @@ Make the following changes in raspi-config
 - decrease amount of memory for the GPU to 16M (Advanced Options)
 - enabled SSH (Advanced Options)
 
-Download the install script via the command line
+Download and run the install script via the command line
 wget https://raw.githubusercontent.com/codenozzle/java-pi/master/install.sh
-
-Run the install script
+sudo chmod 755 install.sh
 ./install.sh
