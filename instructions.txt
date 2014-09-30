@@ -11,3 +11,8 @@ Download and run the install script via the command line
 wget https://raw.githubusercontent.com/codenozzle/java-pi/master/install.sh
 sudo chmod 755 install.sh
 ./install.sh
+
+Follow the onscreen prompts and answer Yes to all. You will be asked to pick a default Java version. I suggest the Java 8 ARM version. It should be #2.
+
+Lastly, run the configure script
+./configure.sh
