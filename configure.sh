@@ -13,7 +13,7 @@ stepCount=$((stepCount+1))
 printf "Step $stepCount: Setting Java Bash Variables\n"
 printf "===============================================\n" 
 sudo echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> ~/.bashrc
-sudo echo 'export CATALINA_HOME=/etc/tomcat7' >> ~/.bashrc
+sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
 . ~/.bashrc
 printf "Done\n\n"
 stepCount=$((stepCount+1))
@@ -22,19 +22,6 @@ printf "Step $stepCount: Setting Tomcat Default Manager GUI User\n"
 printf "===============================================\n"
 newUser="<user username=\"system\" password=\"raspberry\" roles=\"manager-gui\"/>\n"
 sudo sed -i "s|\(</tomcat-users>\)|${newUser}\1|g" /etc/tomcat7/tomcat-users.xml
-printf "Done\n\n"
-stepCount=$((stepCount+1))
-
-printf "Step $stepCount: Setting Tomcat Default Manager GUI User\n"
-printf "===============================================\n"
-newUser="<user username=\"system\" password=\"raspberry\" roles=\"manager-gui\"/>\n"
-sudo sed -i "s|\(</tomcat-users>\)|${newUser}\1|g" /etc/tomcat7/tomcat-users.xml
-printf "Done\n\n"
-stepCount=$((stepCount+1))
-
-printf "Step $stepCount: Adjusting JVM Memory Amount\n"
-printf "===============================================\n"
-sudo echo 'export JAVA_OPTS="-server -Xmx256m"' > $CATALINA_HOME/bin/setenv.sh
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
