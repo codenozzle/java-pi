@@ -11,7 +11,7 @@ sudo apt-get upgrade
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
-printf "Step $stepCount: Install Java Packages\n"
+printf "Step $stepCount: Install Java-Pi Dependent Packages\n"
 printf "======================================\n"
 sudo apt-get install libtomcat7-java tomcat7-common tomcat7 tomcat7-docs tomcat7-admin tomcat7-examples mysql-server mysql-client libhibernate3-java libguava-java groovy maven ant git vim chromium-browser vsftpd
 sudo apt-get clean
