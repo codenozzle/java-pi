@@ -40,9 +40,7 @@ sudo service tomcat7 restart
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
-printf "Step $stepCount: View Application\n"
+printf "Installation and Configuration Complete\n"
 printf "===============================================\n"
 ipAddress=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
-printf "http://${ipAddress}\n"
-printf "Done\n\n"
-stepCount=$((stepCount+1))
+printf "View the application at: http://${ipAddress}\n"
