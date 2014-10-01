@@ -14,6 +14,7 @@ printf "Step $stepCount: Setting Java Bash Variables\n"
 printf "===============================================\n" 
 sudo echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> ~/.bashrc
 sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
+sudo echo 'export WEBAPP_HOME=/var/lib/tomcat7/webapps/ROOT' >> ~/.bashrc
 . ~/.bashrc
 printf "Done\n\n"
 stepCount=$((stepCount+1))
@@ -29,7 +30,7 @@ stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Cloning Java-Pi code from GitHub\n"
 printf "===============================================\n"
-cd /var/lib/tomcat7/webapps/ROOT
+cd $WEBAPP_HOME
 sudo git clone https://git@github.com/codenozzle/java-pi.git
 printf "Done\n\n"
 stepCount=$((stepCount+1))
