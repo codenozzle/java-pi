@@ -27,6 +27,13 @@ sudo sed -i "s|\(</tomcat-users>\)|${newAdminGuiUser}\1|g" /etc/tomcat7/tomcat-u
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
+printf "Step $stepCount: Cloning Java-Pi code from GitHub\n"
+printf "===============================================\n"
+cd /var/lib/tomcat7/webapps/ROOT
+sudo git clone https://git@github.com/codenozzle/java-pi.git
+printf "Done\n\n"
+stepCount=$((stepCount+1))
+
 printf "Step $stepCount: Restarting Tomcat\n"
 printf "===============================================\n"
 sudo service tomcat7 restart
