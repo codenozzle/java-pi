@@ -6,13 +6,13 @@ printf "================================\n\n"
 
 printf "Step $stepCount: Setting Tomcat Java Home\n"
 printf "===============================================\n"
-sudo sed -i 's|#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk|JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/jre/bin/java|g' /etc/default/tomcat7
+sudo sed -i 's|#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk|JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt|g' /etc/default/tomcat7
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Setting Java Bash Variables\n"
 printf "===============================================\n" 
-sudo echo 'export JAVA_HOME= /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/jre/bin/java' >> ~/.bashrc
+sudo echo 'export JAVA_HOME= /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt' >> ~/.bashrc
 sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
 sudo echo 'export WEBAPP_HOME=/var/lib/tomcat7/webapps/ROOT' >> ~/.bashrc
 . ~/.bashrc
