@@ -13,7 +13,7 @@ Installation Instructions
   * Decrease amount of memory for the GPU to 16M (Advanced Options)  
   * Enable SSH (Advanced Options)  
 - Download and run the install script via the command line  
-``` wget https://raw.githubusercontent.com/codenozzle/java-pi/master/install.sh ```  
+``` wget https://raw.githubusercontent.com/codenozzle/java-pi/master/scripts/install.sh ```  
 ``` sudo chmod 755 install.sh ```  
 ``` ./install.sh ```  
 - Follow the onscreen prompts and answer "Y" to all. 
