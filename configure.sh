@@ -30,7 +30,7 @@ stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Cloning Java-Pi code from GitHub\n"
 printf "===============================================\n"
-cd $WEBAPP_HOME
+cd /var/lib/tomcat7/webapps/ROOT
 sudo git clone https://git@github.com/codenozzle/java-pi.git
 printf "Done\n\n"
 stepCount=$((stepCount+1))
