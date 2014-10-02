@@ -37,6 +37,7 @@ stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Building app\n"
 printf "===============================================\n"
+cd java-pi
 mvn package
 printf "Done\n\n"
 stepCount=$((stepCount+1))
