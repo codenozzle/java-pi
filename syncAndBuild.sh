@@ -7,7 +7,6 @@ printf "Done\n\n"
 
 printf "Starting Maven Build\n"
 printf "===============================================\n"
-cd java-pi
 mvn package
 printf "Done\n\n"
 
