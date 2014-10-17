@@ -2,7 +2,8 @@
 printf "Updating Java-Pi code from GitHub\n"
 printf "===============================================\n"
 cd /var/lib/tomcat7/webapps/ROOT
-sudo git pull
+sudo git fetch --all
+sudo git reset --hard origin/master
 printf "Done\n\n"
 
 printf "Starting Maven Build\n"
