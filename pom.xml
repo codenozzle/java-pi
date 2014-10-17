@@ -4,15 +4,6 @@
 	<groupId>com.javacodegeeks.enterprise.rest.jersey</groupId>
 	<artifactId>JerseyJSONExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-	<plugin>
-        	<artifactId>maven-compiler-plugin</artifactId>
-        	<version>3.0</version>
-        	<configuration>
-            		<source>1.7</source>
-            		<target>1.7</target>
-        	</configuration>
-	</plugin>
    	
 	<repositories>
 		<repository>
@@ -44,5 +35,20 @@
 		</dependency>
 
 	</dependencies>
+	
+	<build>
+		<pluginManagement>
+			<plugins> 
+       				<plugin>
+        				<artifactId>maven-compiler-plugin</artifactId>
+        				<version>3.0</version>
+        				<configuration>
+            					<source>1.8</source>
+            					<target>1.8</target>
+        				</configuration>
+				</plugin>
+      			</plugins>
+    		<pluginManagement>
+  	</build>
 
 </project>
