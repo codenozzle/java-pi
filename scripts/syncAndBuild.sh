@@ -7,7 +7,7 @@ printf "Done\n\n"
 
 printf "Starting Maven Build\n"
 printf "===============================================\n"
-mvn package
+sudo mvn clean install
 printf "Done\n\n"
 
 printf "Step $stepCount: Restarting Tomcat\n"
