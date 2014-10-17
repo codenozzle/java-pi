@@ -38,7 +38,7 @@ stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Building app\n"
 printf "===============================================\n"
-mvn package
+suod mvn clean install
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
