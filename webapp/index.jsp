@@ -6,7 +6,7 @@
 
 <body>
 <h1>It works !</h1>
-
+Megabacon!
 <p>If you're seeing this page via a web browser, it means you've setup Tomcat successfully. Congratulations!</p>
  
 <p>This is the default Tomcat home page. It can be found on the local filesystem at: <code>/var/lib/tomcat7/webapps/ROOT/index.html</code></p>
