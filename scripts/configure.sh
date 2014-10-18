@@ -14,7 +14,7 @@ printf "Step $stepCount: Setting Java Bash Variables\n"
 printf "===============================================\n" 
 sudo echo 'export JAVA_HOME= /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt' >> ~/.bashrc
 sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
-sudo echo 'export WEBAPP_HOME=/var/lib/tomcat7/webapps/ROOT' >> ~/.bashrc
+sudo echo 'export WEBAPP_HOME=/usr/share/tomcat7/webapps/ROOT' >> ~/.bashrc
 . ~/.bashrc
 printf "Done\n\n"
 stepCount=$((stepCount+1))
@@ -28,7 +28,7 @@ stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Cloning Java-Pi code from GitHub\n"
 printf "===============================================\n"
-cd /var/lib/tomcat7/webapps/ROOT
+cd /usr/share/tomcat7/webapps/ROOT
 sudo rm -rf *
 sudo git clone https://git@github.com/codenozzle/java-pi.git .
 printf "Done\n\n"
@@ -48,8 +48,6 @@ stepCount=$((stepCount+1))
 
 printf "Configuration Complete\n"
 printf "===============================================\n"
-cd /var/lib/tomcat7/webapps/ROOT/scripts
-sudo chmod 755 *.sh
 ipAddress=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
 java -version
 which java
