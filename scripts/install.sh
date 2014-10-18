@@ -39,5 +39,6 @@ stepCount=$((stepCount+1))
 printf "Step $stepCount: Downloading Configuration Script\n"
 printf "============================\n"
 wget https://raw.githubusercontent.com/codenozzle/java-pi/master/scripts/configure.sh
-chmod 755 configure.sh
+wget https://raw.githubusercontent.com/codenozzle/java-pi/master/scripts/syncAndBuild.sh
+chmod 755 *.sh
 ./configure.sh
