@@ -29,13 +29,6 @@ sudo update-alternatives --config java
 printf "Done\n\n"
 stepCount=$((stepCount+1))
 
-printf "Step $stepCount: Java Info\n"
-printf "==========================\n"
-java -version
-which java
-printf "\n\n"
-stepCount=$((stepCount+1))
-
 printf "Step $stepCount: Downloading Configuration Script\n"
 printf "============================\n"
 wget https://raw.githubusercontent.com/codenozzle/java-pi/master/scripts/configure.sh
