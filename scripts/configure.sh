@@ -12,7 +12,7 @@ stepCount=$((stepCount+1))
 
 printf "Step $stepCount: Setting Java Bash Variables\n"
 printf "===============================================\n" 
-sudo echo 'export JAVA_HOME= /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt' >> ~/.bashrc
+sudo echo 'export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt' >> ~/.bashrc
 sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
 sudo echo 'export WEBAPP_HOME=/usr/share/tomcat7/webapps/ROOT' >> ~/.bashrc
 . ~/.bashrc
