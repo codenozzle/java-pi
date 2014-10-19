@@ -6,7 +6,7 @@ sudo sed -i 's|#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk|JAVA_HOME=/usr/lib/jvm/jdk-
 printf "Setting Java Bash Variables\n" 
 sudo echo 'export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt' >> ~/.bashrc
 sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
-sudo echo 'export WEBAPP_HOME=/usr/share/tomcat7/webapps/ROOT' >> ~/.bashrc
+sudo echo 'export WEBAPP_HOME=/usr/share/tomcat7/webapps/ROOT/webapp' >> ~/.bashrc
 . ~/.bashrc
 
 printf "Setting Tomcat Users\n"
