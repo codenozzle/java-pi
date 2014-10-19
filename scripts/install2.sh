@@ -14,5 +14,3 @@ sudo apt-get clean
 
 printf "Choose Java Version\n"
 sudo update-alternatives --config java
-
-./configure.sh
