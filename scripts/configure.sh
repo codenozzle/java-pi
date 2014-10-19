@@ -18,7 +18,7 @@ cd /usr/share/tomcat7/webapps/ROOT
 sudo rm -rf *
 sudo git clone https://git@github.com/codenozzle/java-pi.git .
 
-printf "Starting Maven Clean and Build\n"
+printf "Starting Maven Build\n"
 sudo mvn clean install
 
 printf "Restarting Tomcat\n"
