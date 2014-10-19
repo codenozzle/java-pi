@@ -3,7 +3,6 @@ printf "Starting installation of Java Pi\n"
 wget https://raw.githubusercontent.com/codenozzle/java-pi/master/scripts/configure.sh
 wget https://raw.githubusercontent.com/codenozzle/java-pi/master/scripts/syncAndBuild.sh
 chmod 755 *.sh
-./configure.sh
 
 printf "Updating Raspberry Pi Packages\n"
 sudo apt-get update
@@ -20,3 +19,5 @@ sudo apt-get clean
 
 printf "Choose Java Version\n"
 sudo update-alternatives --config java
+
+./configure.sh
