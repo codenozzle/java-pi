@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 printf "Install Java-Pi Dependent Packages\n"
-sudo apt-get install libtomcat7-java tomcat7-common tomcat8 tomcat8-docs tomcat8-admin tomcat8-examples mysql-server mysql-client libhibernate3-java libguava-java groovy maven ant git vim chromium-browser vsftpd
+sudo apt-get install libtomcat8-java tomcat8-common tomcat8 tomcat8-docs tomcat8-admin tomcat8-examples mysql-server mysql-client libhibernate3-java libguava-java groovy maven ant git vim chromium-browser vsftpd
 sudo apt-get clean
 
 printf "Choose Java Version\n"
