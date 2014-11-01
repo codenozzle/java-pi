@@ -8,7 +8,7 @@ sudo echo 'export WEBAPP_HOME=/usr/share/tomcat7/webapps/ROOT/webapp' >> ~/.bash
 
 printf "Setting Tomcat Users\n"
 newAdminGuiUser="<user username=\"pi\" password=\"raspberry\" roles=\"manager-gui, admin-gui\"/>\n"
-sudo sed -i "s|\(</tomcat-users>\)|${newAdminGuiUser}\1|g" /etc/tomcat7/tomcat-users.xml
+sudo sed -i "s|\(</tomcat-users>\)|${newAdminGuiUser}\1|g" /usr/share/tomcat-7/conf/tomcat-users.xml
 
 printf "Cloning Java-Pi code from GitHub\n"
 cd /usr/share/tomcat7/webapps/ROOT
