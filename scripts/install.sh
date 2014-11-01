@@ -15,6 +15,7 @@ sudo tar xvzf apache-tomcat-7.0.56.tar.gz
 sudo apt-get install maven ant git
 sudo mkdir /usr/share/tomcat7
 sudo mv apache-tomcat-7.0.56/* /usr/share/tomcat7
+sudo rm -rf apache-tomcat-7.0.56*
 sudo apt-get clean
 
 printf "Choose Java Version\n"
