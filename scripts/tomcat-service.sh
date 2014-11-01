@@ -2,10 +2,10 @@
 export CATALINA_HOME=/usr/local/apache-tomcat-7.0.47
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 start() {
- sh $CATALINA_HOME/bin/startup.sh
+ sudo sh $CATALINA_HOME/bin/startup.sh
 }
 stop() {
- sh $CATALINA_HOME/bin/shutdown.sh
+ sudo sh $CATALINA_HOME/bin/shutdown.sh
 }
 case $1 in
   start|stop) $1;;
