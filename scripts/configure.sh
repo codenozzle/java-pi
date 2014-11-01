@@ -1,8 +1,5 @@
 #!/bin/bash
 printf "Starting configuration of Java Pi\n"
-printf "Setting Tomcat Java Home\n"
-sudo sed -i 's|#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk|JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt|g' /etc/default/tomcat7
-
 printf "Setting Java Bash Variables\n" 
 sudo echo 'export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt' >> ~/.bashrc
 sudo echo 'export CATALINA_HOME=/usr/share/tomcat7' >> ~/.bashrc
@@ -22,7 +19,8 @@ printf "Starting Maven Build\n"
 sudo mvn clean install
 
 printf "Restarting Tomcat\n"
-sudo service tomcat7 restart
+cd /home/pi
+./tomcat-service restart
 
 printf "Configuration Complete\n"
 ipAddress=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
