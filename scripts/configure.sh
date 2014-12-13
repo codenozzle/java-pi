@@ -20,7 +20,7 @@ sudo mvn clean install
 
 printf "Restarting Tomcat\n"
 cd /home/pi
-./tomcat-service restart
+./tomcat-service start
 
 printf "Configuration Complete\n"
 ipAddress=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
